@@ -10,6 +10,6 @@
 
 Скриншоты экранов
 
-![BannerSampleActivity](screenshot-banner-sample.png)
-
-![MediatorSampleActivity](screenshot-mediator-sample.png)
+| BannerSampleActivity | MediatorSampleActivity |
+| :---: | :---: |
+| ![BannerSampleActivity](screenshot-banner-sample.png) | ![MediatorSampleActivity](screenshot-mediator-sample.png) |
