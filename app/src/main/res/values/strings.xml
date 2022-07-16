@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Reelads samples</string>
+    <string name="banner_sample">Reelads banner sample</string>
+    <string name="mediator_sample">Reelads mediator sample</string>
+
+    <string name="reelads_banner_uid" translatable="false">a0dbc3eb-05b7-4d53-b0f1-47004cd0a530</string>
+    <string name="reelads_mediator_uid" translatable="false">2922e791-ef40-435c-b762-220ecd42a665</string>
+    <string name="reelads_sample_provider" translatable="false">Sample-provider</string>
+</resources>
