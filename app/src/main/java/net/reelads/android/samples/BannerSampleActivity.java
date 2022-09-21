@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import net.reelads.android.AdView;
+import net.reelads.android.Lang;
+import net.reelads.android.Target;
 
 public class BannerSampleActivity extends AppCompatActivity {
     private AdView adView;
@@ -16,6 +18,7 @@ public class BannerSampleActivity extends AppCompatActivity {
 
         adView = findViewById(R.id.adview);
         adView.setUid(getString(R.string.reelads_banner_uid));
+        adView.setTarget(new Target().setLang(Lang.getOrUndefined()));
         adView.loadAd();
     }
 

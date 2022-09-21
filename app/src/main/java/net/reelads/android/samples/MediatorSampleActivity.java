@@ -6,7 +6,9 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import net.reelads.android.AdView;
+import net.reelads.android.Lang;
 import net.reelads.android.Mediator;
+import net.reelads.android.Target;
 
 public class MediatorSampleActivity extends AppCompatActivity {
     private LinearLayout adContainer;
@@ -73,6 +75,7 @@ public class MediatorSampleActivity extends AppCompatActivity {
     private void createReelAdView(String adUnitId) {
         adView = new AdView(this);
         adView.setUid(adUnitId);
+        adView.setTarget(new Target().setLang(Lang.getOrUndefined()));
         adContainer.removeAllViewsInLayout();
         adContainer.addView(adView);
         adView.loadAd();
