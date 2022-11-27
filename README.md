@@ -1,15 +1,41 @@
-# Reelads-samples
+# ReelAds Samples
 
-Примеры интеграции библиотеки отображения баннеров в Android приложение
+Samples of integrating the banner display library into an Android application.
 
-Перед сборкой проекта
+## Quick start:
 
-1. Зарегистрируйтесь на [Reelads](https://reelads.net/sign-up)
-2. Скачайте архив с библиотекой отображения баннеров [reelads-android-libs](https://reelads.net/quick-start/download-libs)
-3. Распакуйте архив в директорию`libs`
+1. Register on [ReelAds](https://reelads.net/sign-up)
+2. Download the archive with the banner display library [reelads-android-libs](https://reelads.net/quick-start/download-libs)
+3. Unpack the archive into the `libs` directory
+4. Add instructions to the build file
+```
+android {
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 
-Скриншоты экранов
+    packagingOptions {
+        resources {
+            exclude "META-INF/*"
+        }
+    }
+}
 
-| BannerSampleActivity | MediatorSampleActivity |
-| :---: | :---: |
+dependencies {
+    implementation 'io.netty:netty-all:4.1.85.Final'
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+}
+```
+5. Add user permissions for internet access to AndroidManifest.xml
+```
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+## Screenshots
+
+|                 BannerSampleActivity                  |                  MediatorSampleActivity                   |
+|:-----------------------------------------------------:|:---------------------------------------------------------:|
 | ![BannerSampleActivity](screenshot-banner-sample.png) | ![MediatorSampleActivity](screenshot-mediator-sample.png) |
